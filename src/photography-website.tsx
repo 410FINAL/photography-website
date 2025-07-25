@@ -176,7 +176,7 @@ const PhotographyWebsite = () => {
       <nav className="fixed top-0 w-full bg-black/95 backdrop-blur-lg z-50 border-b border-gray-700">
         <div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-8 py-4 gap-4">
           <div className="text-xl md:text-2xl font-bold text-white" style={{ textShadow: '0 0 10px rgba(255, 255, 255, 0.5)' }}>
-            410 FINAL
+            404 FINAL
           </div>
           <ul className="flex gap-4 md:gap-8 flex-wrap">
             {['welcome', 'shop', 'custom', 'statement', 'contact'].map((page) => (
@@ -203,7 +203,7 @@ const PhotographyWebsite = () => {
       {activePage === 'welcome' && (
         <div className="welcome-bg welcome-pattern relative min-h-screen flex items-center justify-center">
           <div className="text-center z-10 relative">
-            <h1 className="text-4xl md:text-6xl lg:text-8xl mb-4 glow-pulse font-bold">410 FINAL</h1>
+            <h1 className="text-4xl md:text-6xl lg:text-8xl mb-4 glow-pulse font-bold">404 FINAL</h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8 leading-relaxed tracking-widest">
               1 PRINT ONLY<br />NO DIGITAL FILES<br />NO NEGATIVES<br />NO BACK-UPs
             </p>
@@ -476,7 +476,7 @@ const PhotographyWebsite = () => {
               
               <p>On the other side of the coin, we now live in an age where photographs are taken, gleamed for a second, and then discarded. People walk the streets aimlessly with thousands of pictures in their pockets, most that will never be revisited or appreciated after the initial shot. We consume and consume and consume but not appreciate the little moments in these technically advanced times.</p>
 
-              <p>The artist founded 410 FINAL to correct both of these narratives: print out wonderful snapshots of life and destroy all digital and physical evidence. Only a singular print remains as proof of existence. The artists' peers do not approve of this because they want to hoard and collect, they are scared of letting go, but the artist is not. They know more wonderful moments will pass through the lens, will you be one of the owners?</p>
+              <p>The artist founded 404 FINAL to correct both of these narratives: print out wonderful snapshots of life and destroy all digital and physical evidence. Only a singular print remains as proof of existence. The artists' peers do not approve of this because they want to hoard and collect, they are scared of letting go, but the artist is not. They know more wonderful moments will pass through the lens, will you be one of the owners?</p>
 
               <div className="mt-12">
                 <Button
@@ -506,7 +506,7 @@ const PhotographyWebsite = () => {
             </h2>
             <div className="bg-gray-900 p-12 border border-gray-600 rounded">
               <div className="text-4xl text-white mb-8 tracking-wider" style={{ textShadow: '0 0 10px rgba(255, 255, 255, 0.3)' }}>
-                (555) 410-FOTO
+                (555) 404-FOTO
               </div>
               <p className="text-gray-300 text-lg leading-relaxed max-w-lg mx-auto">
                 Call the artist, please leave a message if they do not answer and they will return the call when they have a moment.

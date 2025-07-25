@@ -1,6 +1,6 @@
-# Photography Website
+# 404 FINAL - Photography Website
 
-This project is a photography website built using React and Vite. It showcases various photography volumes and allows users to request custom commission work.
+This project is the 404 FINAL photography website built using React and Vite. It showcases various photography volumes and allows users to request custom commission work.
 
 ## Project Structure
 
