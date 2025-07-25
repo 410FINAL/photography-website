@@ -14,6 +14,10 @@ const PhotographyWebsite = () => {
     colorPref: '',
     description: ''
   });
+  const [emailSignup, setEmailSignup] = useState({
+    email: '',
+    name: ''
+  });
 
   const toggleVolume = (volumeId) => {
     setExpandedVolumes(prev => ({
@@ -50,6 +54,29 @@ const PhotographyWebsite = () => {
       colorPref: '',
       description: ''
     });
+  };
+
+  const handleEmailSignupChange = (e) => {
+    const { name, value } = e.target;
+    setEmailSignup(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const submitEmailSignup = async (e) => {
+    e.preventDefault();
+    try {
+      // Here you would typically send to your email service
+      // For now, we'll just show a success message
+      alert(`Thank you ${emailSignup.name || 'for signing up'}! You'll receive updates at ${emailSignup.email}`);
+      setEmailSignup({
+        email: '',
+        name: ''
+      });
+    } catch (error) {
+      alert('Error signing up for email updates. Please try again.');
+    }
   };
 
   const volumes = [
@@ -504,13 +531,63 @@ const PhotographyWebsite = () => {
             <h2 className="text-4xl mb-8 font-bold" style={{ textShadow: '0 0 20px rgba(255, 255, 255, 0.3)' }}>
               CONTACT // DIRECT
             </h2>
-            <div className="bg-gray-900 p-12 border border-gray-600 rounded">
+            
+            {/* Phone Contact Box */}
+            <div className="bg-gray-900 p-12 border border-gray-600 rounded mb-8">
               <div className="text-4xl text-white mb-8 tracking-wider" style={{ textShadow: '0 0 10px rgba(255, 255, 255, 0.3)' }}>
                 (555) 404-FOTO
               </div>
               <p className="text-gray-300 text-lg leading-relaxed max-w-lg mx-auto">
                 Call the artist, please leave a message if they do not answer and they will return the call when they have a moment.
               </p>
+            </div>
+
+            {/* Email Signup Box */}
+            <div className="bg-gray-900 p-12 border border-gray-600 rounded">
+              <h3 className="text-2xl text-white mb-6 font-bold tracking-wider" style={{ textShadow: '0 0 10px rgba(255, 255, 255, 0.3)' }}>
+                EMAIL UPDATES
+              </h3>
+              <p className="text-gray-300 text-lg leading-relaxed max-w-lg mx-auto mb-8">
+                Stay informed about new volumes, exclusive releases, and upcoming exhibitions.
+              </p>
+              
+              <form onSubmit={submitEmailSignup} className="max-w-md mx-auto space-y-6">
+                <div className="space-y-2">
+                  <Label htmlFor="signup-name" className="text-gray-300 font-mono tracking-wider">NAME (OPTIONAL):</Label>
+                  <Input
+                    type="text"
+                    id="signup-name"
+                    name="name"
+                    value={emailSignup.name}
+                    onChange={handleEmailSignupChange}
+                    className="bg-black border-gray-600 text-white focus:border-white focus:ring-white font-mono"
+                    placeholder="Your name"
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <Label htmlFor="signup-email" className="text-gray-300 font-mono tracking-wider">EMAIL:</Label>
+                  <Input
+                    type="email"
+                    id="signup-email"
+                    name="email"
+                    value={emailSignup.email}
+                    onChange={handleEmailSignupChange}
+                    required
+                    className="bg-black border-gray-600 text-white focus:border-white focus:ring-white font-mono"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                
+                <Button
+                  type="submit"
+                  variant="outline"
+                  size="lg"
+                  className="w-full px-6 py-3 border-2 border-white text-white bg-transparent transition-all duration-300 tracking-widest hover:bg-white hover:text-black font-mono"
+                >
+                  SUBSCRIBE_TO_UPDATES
+                </Button>
+              </form>
             </div>
           </div>
         </div>
